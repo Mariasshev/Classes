@@ -9,6 +9,10 @@ namespace ConsoleApp7
             Employee person1 = new Employee();
             person1.AddInf();
             person1.ShowInf();
+
+
+            Fly fly1 = new Fly("Adam Aircraft Industries", "Airlines BB2", 2003, "passenger plane");
+            fly1.ShowInf();
         }
 
     }

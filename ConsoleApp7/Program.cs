@@ -105,4 +105,73 @@ namespace ConsoleApp7
             Console.WriteLine($"Official duties: {this.Official_duties}");
         }
     }
+
+    internal class Fly
+    {
+        private string name;
+        private string manufacturer;
+        private int release_year;
+        private string type;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public string Manufacturer
+        {
+            get { return manufacturer; }
+            set { manufacturer = value; }
+        }
+
+        public int Release_year
+        {
+            get { return release_year; }
+            set { release_year = value; }
+        }
+
+        public string Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
+
+        public Fly()
+        {
+            Console.WriteLine("Add a new fly!");
+        }
+        public Fly(string name, string manufacturer, int year, string type)
+        {
+            this.Name = name;
+            this.Manufacturer = manufacturer;
+            this.Release_year = year;
+            this.Type = type;
+        }
+
+
+        public void AddInf()
+        {
+            Console.Write("Enter fly`s name: ");
+            this.Name = Console.ReadLine();
+
+            Console.Write("Enter fly`s manufacturer: ");
+            this.Manufacturer = Console.ReadLine();
+
+            Console.Write("Enter fly`s release year: ");
+            this.Release_year = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter fly`s type: ");
+            this.Type = Console.ReadLine();
+        }
+
+        public void ShowInf()
+        {
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"Manufacturer: {Manufacturer}");
+            Console.WriteLine($"Release year: {Release_year}");
+            Console.WriteLine($"Type: {Type}");
+        }
+
+    }
 }
